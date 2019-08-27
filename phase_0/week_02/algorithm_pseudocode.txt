@@ -1,0 +1,105 @@
+1)
+	Newton Seconds Law
+
+	1. devine massa
+	2. devine acceleration
+	3. calculate force with formula massa * acceleration
+	4. display the result of calculation 	
+	======================================================
+	START
+	  STORE `m` with 600
+	  STORE `a` with 2
+	
+	  STORE `F` with CALCULATE (m * a)
+	
+	  DISPLAY `F`
+	END
+
+2) 	
+	Tahun Kabisat
+	
+	1. Tentukan tahun
+	2. Jika tahun di bagi 4 tidak bersisa dan tahun dibagi 100 tidak bersisa dan tahun dibagi 400 tidak bersisa maka tampilkan tahun kabisat
+	3. Atau jika tahun di bagi 4 tidak bersisa dan dibagi dan dibagi 100 tidak bersisa maka tampilkan tahun kabisat
+	4. Selain itu tampilkan bukan tahun kabisat
+	===============================================================
+
+	START 
+	  STORE `tahun` with any value
+	  IF `tahun` MOD 4 EQUALS 0 AND `tahun` MOD 100 EQUALS 0 AND `tahun` MOD 400 EQUALS 0 THEN
+	    DISPLAY 'TAHUN KABISAT'
+	  ELSE IF `tahun` MOD 4 EQUALS 0 AND `tahun` MOD 100 not EQUALS 0 THEN
+	    DISPLAY 'TAHUN KABISAT'
+	  ELSE 
+	    DISPLAY 'BUKAN TAHUN KABISAT'
+	  END IF
+	END
+
+3) 	Laundry Day
+
+	1. Set clothes to 0
+	2. If clothes smaller than 20 
+	3. Add clothes by 1
+	4. When clothes equals to 20 
+	5. Nyalakan mesin cuci
+	================================================================
+
+	START 
+	  STORE `clothes` EQUALS to 0
+	  WHILE `clothes` < 20
+	  	ADD `clothes` by 1
+	  END WHILE
+	  DISPLAY 'Nyalakan mesin cuci'
+	END  
+
+4) 	Periksa Kuku
+
+	1. Set students to 40
+	2. If students not equals to 1
+	3. Substract students by 1 
+	4. Then check the nail
+	5. If the nail is long punish the students
+	6. If not praise the students
+	7. When student equals to 1 end the proses
+	=================================================================
+
+	START
+	  STORE `students` to 40
+	  FOR `students` = 40 to 0 
+		IF long_nail is true
+		  DO Punish the students
+		ELSE 
+		  DO Praise the students
+		END IF
+	  END FOR
+	  
+
+		   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
