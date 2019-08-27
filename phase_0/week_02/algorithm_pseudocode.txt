@@ -55,7 +55,7 @@
 4) 	Periksa Kuku
 
 	1. Set students to 40
-	2. If students not equals to 1
+	2. If students not equals to 0
 	3. Substract students by 1 
 	4. Then check the nail
 	5. If the nail is long punish the students
@@ -65,7 +65,7 @@
 
 	START
 	  STORE `students` to 40
-	  FOR `students` = 40 to 0 
+	  FOR `students` = 40 to 1
 		IF long_nail is true
 		  DO Punish the students
 		ELSE 
