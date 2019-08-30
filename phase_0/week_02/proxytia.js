@@ -1,5 +1,5 @@
 var nama = 'sapi';
-var peran = 'penyihir';
+var peran = 'tabib';
 
 if (nama === '' && peran === '') {
     console.log('Nama dan Peran harus di isi !');
@@ -17,6 +17,6 @@ if (nama === '' && peran === '') {
     console.log('Selamat datang di dunia Proxytia saudara/i ' + nama);
     console.log('Halo Penyihir ' + nama + ', ciptakan keajaiban yang membantu kemenaganmu !!!!');
 }else {
-    console.log('Wahai saudara/i ' + nama + 'yang terhormat')
+    console.log('Wahai saudara/i ' + nama + ' yang terhormat')
     console.log('Peran yang anda pilih tidak ada, silahkan pilih salah satu peran anda sebagai ksatria atau tabib, atau penyihir');
 }
