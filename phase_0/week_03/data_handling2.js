@@ -1,7 +1,7 @@
 var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
 
 function dataHandling2(data) {
-  data.splice(1, 4, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"); 
+  data.splice(1, 4, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/10/1989", "Pria", "SMA Internasional Metro"); 
   var dataDate = data[3].split('/');
   var dataDate2 = dataDate.join('-');
   var name = data[1].slice(0, 14);

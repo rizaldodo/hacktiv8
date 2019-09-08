@@ -4,7 +4,11 @@ function cariMean(arr){
         sumOf += arr[i];
     }
     var avg = sumOf/arr.length;
-    return Math.ceil(avg);
+    if(avg-(Math.floor(avg) < 0.5)){
+        return Math.floor(avg);
+    }else if(avg-(Math.floor(avg) >= 0.5)){
+        return Math.ceil(avg);
+    }
 }
 // TEST CASES
 console.log(cariMean([1, 2, 3, 4, 5])); // 3
