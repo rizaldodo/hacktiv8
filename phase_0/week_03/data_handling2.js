@@ -1,8 +1,15 @@
 var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
 
+function sortDate(date){
+  var result = date.sort(function(a,b){
+    return Number(a) < Number(b)
+  });
+  return result;
+}
 function dataHandling2(data) {
   data.splice(1, 4, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/10/1989", "Pria", "SMA Internasional Metro"); 
   var dataDate = data[3].split('/');
+  
   var dataDate2 = dataDate.join('-');
   var name = data[1].slice(0, 14);
   var month;
@@ -47,7 +54,7 @@ function dataHandling2(data) {
 
   console.log('1. ', data);
   console.log('2. ', month);
-  console.log('3. ', dataDate);
+  console.log('3. ', sortDate(dataDate));
   console.log('4. ', dataDate2);
   console.log('5. ', name);
 
