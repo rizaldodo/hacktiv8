@@ -1,19 +1,27 @@
-var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
+var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/10/1989", "Membaca"];
 
-function sortDate(date){
+function sort(date){
   var result = date.sort(function(a,b){
     return Number(a) < Number(b)
   });
   return result;
 }
 function dataHandling2(data) {
-  data.splice(1, 4, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/10/1989", "Pria", "SMA Internasional Metro"); 
-  var dataDate = data[3].split('/');
-  
-  var dataDate2 = dataDate.join('-');
+   
+  // data.pop();
+  data.splice(1,1, 'Roman Alamsyah Elsharawy');
+  data.splice(2,1, 'Provinsi Bandar Lampung');
+  data.splice(4,1, 'Pria', 'SMA International Metro')
+  // data.push('Pria', 'SMA International Metro')
+
+  var dataDate = input[3];
+  var dateSplit = dataDate.split('/')
+ 
+  var dataDate2 = dateSplit.join('-');
   var name = data[1].slice(0, 14);
   var month;
-  switch(dataDate[1]){
+  // console.log(data);
+  switch(dateSplit[1]){
     case '01':
       month = 'Januari';
       break;  
@@ -54,7 +62,7 @@ function dataHandling2(data) {
 
   console.log('1. ', data);
   console.log('2. ', month);
-  console.log('3. ', sortDate(dataDate));
+  console.log('3. ', sort(dateSplit));
   console.log('4. ', dataDate2);
   console.log('5. ', name);
 
