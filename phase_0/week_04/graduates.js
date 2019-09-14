@@ -1,7 +1,6 @@
 function graduates(students){
   var group = [];
   var result = {};
-  var graduates = [];
 
   for(i=0; i<students.length; i++){
     if(group.length === 0){
@@ -32,8 +31,9 @@ function graduates(students){
       }  
     }
     result[group[i]] = details;
+    
   }
-  
+  // console.log(group)
   return result;
 
 }
