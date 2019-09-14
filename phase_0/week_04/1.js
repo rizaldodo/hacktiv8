@@ -29,23 +29,22 @@ function basmiKejahatan(arr){
     var begundal = 0;
 
     for(i=0; i<arr.length; i++){
-       
+      if(arr[i] === '*'){
+        hp--;
+        if(hp == 0){
+          if (begundal > 0){
+            return 'Maaf Gundala, kamu telah gugur. Kamu hanya berhasil menangkap ' + begundal + ' begundal';          
+          }else{
+            return 'Maaf Gundala kamu telah gugur. Dan kamu tidak berhasil menangkap para begundal';
+          }
+        }
+      }
       if(arr[i] === 'Begundal'){
-            begundal++
-        }else if(arr[i] === '*'){
-            hp--;
-            if(hp < 1){
-                if(begundal > 1){
-                    return 'Maaf Gundala, kamu telah gugur. Kamu hanya berhasil menangkap ' + begundal + ' begundal';
-                }
-                return 'Maaf Gundala kamu telah gugur. Kamu hanya berhasil menangkap ' + begundal + ' begundal.' ;
-            }
-               
-     }
-    }
-    if(hp > 0){
-        return 'Selamat Gundala, kamu telah memenagkan peperangan! Kamu telah menangkap ' + begundal + ' begundal.'
-    }
+        begundal++;
+      }
+    } 
+    return 'Selamat Gundala, kamu telah berhasil memenangkan peperangan! Kamu telah menangkap ' + begundal + ' begundal'
+      
 
 }
 console.log(basmiKejahatan(['*', '*', '#', '#', 'Begundal', '#', 'Begundal', 'Begundal', '#']));
@@ -54,5 +53,5 @@ console.log(basmiKejahatan(['*', '*', '#', '#', 'Begundal', '#', 'Begundal', 'Be
 console.log(basmiKejahatan(['*', '*', '*', 'Begundal', '*', '#', 'Begundal']));
 // Maaf Gundala, kamu telah gugur. Kamu hanya berhasil menangkap 1 begundal.
 
-console.log(basmiKejahatan(['*', '*', '*', '*', '#', 'Begundal', '*', 'Begundal', '#', 'Begundal']));
+console.log(basmiKejahatan(['*', '#', '#', '*', '#', 'Begundal', '*', 'Begundal', '#', 'Begundal']));
 // Maaf Gundala, kamu telah gugur. Dan kamu tidak berhasil menangkap para begundal.

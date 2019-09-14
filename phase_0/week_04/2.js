@@ -13,7 +13,8 @@
 function reverseAll(arr){
   var arrStr = [];
   var arrReverse = [];
-  for(i=arr.length; i>0; i--){
+  var arrNum = [];
+  for(i=0; i<arr.length; i++){
       temp = arr[i] + '';
       arrStr.push(temp);
   }
@@ -23,9 +24,15 @@ function reverseAll(arr){
     var temp = '';
       for(j=arrStr[i].length-1; j>=0; j--){
           temp += arrStr[i][j];
+          
       }
-      arrReverse.push(temp);
+      arrReverse.push(Number(temp));
   }
+  // for(i=0; i<arrReverse; i++){
+  //    temp += Number(arr[i]);
+  //    arrNum.push(temp);
+  // }
+
   return arrReverse;
      console.log(arrStr);
 }
