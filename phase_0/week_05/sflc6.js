@@ -1,8 +1,8 @@
 function piramid(n){
     //your code here
-    if(n === undefined){
-        return 0;
-    }
+  if(n === undefined){
+      return 0;
+  }
   if(n==0){
     return 0;
   }else{

@@ -192,31 +192,187 @@
 // //     totalProfit: 0 } ]
 // console.log(countProfit([])); //[]
 
-function formTrainSeating(passengers) {
-    var gerbong = [[], [], [], [], []];
+// function formTrainSeating(passengers) {
+//     var gerbong = [[], [], [], [], []];
 
-    for(i = 0; i<passengers.length; i++){
-        // for(j=0; j<gerbong.length; j++){
-            if(passengers[i] === 'A'){
-                gerbong[0].push(passengers[i]);
-            }else if(passengers[i] === 'B'){
-                gerbong[1].push(passengers[i]);
-            }else if(passengers[i] === 'C'){
-                gerbong[2].push(passengers[i]);
-            }else if(passengers[i] === 'D'){
-                gerbong[3].push(passengers[i]);
-            }else if(passengers[i] === 'E'){
-                gerbong[4].push(passengers[i])
+//     for(i = 0; i<passengers.length; i++){
+//         // for(j=0; j<gerbong.length; j++){
+//             if(passengers[i] === 'A'){
+//                 gerbong[0].push(passengers[i]);
+//             }else if(passengers[i] === 'B'){
+//                 gerbong[1].push(passengers[i]);
+//             }else if(passengers[i] === 'C'){
+//                 gerbong[2].push(passengers[i]);
+//             }else if(passengers[i] === 'D'){
+//                 gerbong[3].push(passengers[i]);
+//             }else if(passengers[i] === 'E'){
+//                 gerbong[4].push(passengers[i])
+//             }
+//         // }
+//     }
+
+//     return gerbong;
+
+//   }
+  
+//   console.log(formTrainSeating('ABDCCCE')); // [['A'], ['B'], ['C', 'C', 'C'], ['D'], ['E']]
+//   console.log(formTrainSeating('ABC')); // [['A'], ['B'], ['C'], [], []]
+//   console.log(formTrainSeating('E')); // [[], [], [], [], ['E']]
+//   console.log(formTrainSeating('EAB')); // [['A'], ['B'], [], [], ['E']]
+//   console.log(formTrainSeating('BBABB')); // [['A'], ['B', 'B', 'B', 'B'], [], [], []]
+
+// var data = [
+//     ['Name', 'Batch'],
+//     ['Yusuf', 'Joyful'],
+//     ['Icha', 'Infinite'],
+//     ['Mahdi', 'Humble'],
+//     ['Stef', 'Glory'],
+//     ['Dhita', 'Fearless']
+// ]
+// function spice(data){
+
+//     var result = [];
+//     // var obj = {};
+
+//     for(i=1; i<data.length; i++){
+        
+//            result.push({
+//                  Name : data[i][0],
+//                  Batch :  data[i][1]
+//            }); 
+//         // console.log(data[i][0]);
+//         // console.log(data[i][1]);
+//     }
+//     // result.push(obj);
+//     return result;
+// }
+
+// console.log(spice(data));
+
+/*
+ALGHORITM
+Buat penampung posisi koordinat dalam bentuk array
+Buat variable boolean any dengan nilai false
+Buat looping untuk mencari koordinat array yang berisi '*'
+    Setelah '*' ketemu maka PUSH koordinat tersebut pada array penampung yang sudah di  deklarasikan di awal kemudian return nilai fungsi pada koordinat.
+Jika looping tidak menemukan '*' maka set nilai any menjadi true
+jika nilai any true maka fungsi aka me return 'No Drone'.
+*/
+
+// function dronePosition(arr){
+//     var coordinate = [];
+//     var any = false;
+//     for(i=0; i<arr.length; i++){
+//         for(j=0; j<arr[i].length; j++){
+//             if(arr[i][j] === '*'){
+//              coordinate.push(i);
+//              coordinate.push(j);
+//              return coordinate;
+//             }
+//             else if(arr[2][2] === ''){
+//                 any = true;
+//             }
+//         }
+//     }
+//     if(any){
+//         return 'No Drone';
+//     }
+// }
+
+// console.log(dronePosition([
+//     ['', '', ''],
+//     ['', '', ''],
+//     ['', '', '*']
+//   ])); // 2, 2
+  
+//   console.log(dronePosition([
+//     ['', '', ''],
+//     ['', '*', ''],
+//     ['', '', '']
+//   ])); // 1, 1
+  
+//   console.log(dronePosition([
+//     ['', '', '*'],
+//     ['', '', ''],
+//     ['', '', '']
+//   ])); // 0, 2
+  
+//   console.log(dronePosition([
+//     ['', '', ''],
+//     ['', '', ''],
+//     ['', '', '']
+// ])); // No drone
+
+// function howManyGifts(max, gifts){
+//     count = 0;
+//     // sortedGift = gifts;
+//     for(i=0; i<gifts.length; i++){
+//         for(j=0;j<gifts.length-i-1; j++){
+//             if(gifts[j]>gifts[j+1]){
+//                 temp = gifts[j];
+//                 gifts[j] = gifts[j+1];
+//                 gifts[j+1] = temp;
+//             }
+//         }
+//     }
+//     for(i=0; i<gifts.length; i++){
+//         if(max >= gifts[i]){
+//             max -= gifts[i];
+//             count++
+//         }
+//     }
+//     return count;
+// }
+// console.log(howManyGifts(30000, [15000, 12000, 5000, 3000, 10000])); // 4
+// console.log(howManyGifts(10000, [2000, 2000, 3000, 1000, 2000, 10000])); // 5
+// console.log(howManyGifts(4000, [7500, 1500, 2000, 3000])); // 2
+// console.log(howManyGifts(50000, [25000, 25000, 10000, 15000])); // 3
+// console.log(howManyGifts(0, [10000, 3000])); // 0
+
+function productCategories(product){
+    var type = [];
+    var any = false;
+    var result = {};
+    
+    for(i=0; i<product.length; i++){
+        if(type.length == 0){
+            type.push(product[i][2]);
+        }
+        // var qty=1;
+        for(j=0; j<type.length; j++){
+            if(type[j] === product[i][2]){
+                any = true;
+                qty++;
+            }else{
+                any = false;
             }
-        // }
+
+        }
+        if(!any){
+            
+            type.push(product[i][2]);
+        }
+        
+    }
+    for(i=0 ;i<type.length; i++){
+        var qty = 0;
+        for(j=0; j<product.length; j++){
+            if(product[j][2] == type[i]){
+                qty++;
+            }
+        result[type[i]] = qty;
+        }
+        
     }
 
-    return gerbong;
+    return result;
+    
+}
 
-  }
-  
-  console.log(formTrainSeating('ABDCCCE')); // [['A'], ['B'], ['C', 'C', 'C'], ['D'], ['E']]
-  console.log(formTrainSeating('ABC')); // [['A'], ['B'], ['C'], [], []]
-  console.log(formTrainSeating('E')); // [[], [], [], [], ['E']]
-  console.log(formTrainSeating('EAB')); // [['A'], ['B'], [], [], ['E']]
-  console.log(formTrainSeating('BBABB')); // [['A'], ['B', 'B', 'B', 'B'], [], [], []]
+console.log(productCategories([
+    ['Mouse Logitech', 150000, 'Mouse'],
+    ['ATI Radeon', 800000, 'Graphic Card'],
+    ['NVIDIA Card', 760000, 'Graphic Card'],
+    ['Samsung Harddisk 1TB', 1300000, 'Harddisk'],
+  ]));
+  // { Mouse: 1, 'Graphic Card': 2, Harddisk: 1 }
