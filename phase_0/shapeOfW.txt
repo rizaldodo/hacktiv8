@@ -1,0 +1,74 @@
+
+Buat sebuah function bernama shapeOfW, yang akan menerima 2 parameter : string dan angka (asumsi nama parameter : str dan totalLevel). Buat code di dalam function shapeOfW yang akan mengurutkan huruf berdasarkan level nya. Saat ini, totalLevel maksimum 6, dan maksimum jumlah karakter string nya 100.
+
+Driver code :
+
+function shapeOfW(str, totalLevel) {
+  //your code here...
+}
+
+
+Contoh 1 :
+shapeOfW(“RUBAH&FOX”, 3)
+
+//result yang diharapkan : RHXUA&OBF
+
+Ilustrasi : 
+R    	    H  	        X 
+    U	A       &     O     
+      B		       F
+
+Karena:  
+Level 1 : R, H, X
+Level 2 : U, A, &, O
+Level 3 : B, F
+
+
+
+
+
+
+
+
+
+
+Contoh 2 :
+shapeOfW(“ABCDEFGHIJKLMNOPQ”, 5)
+
+//result yang diharapkan : AIQBHJPCGKODFLNEM
+
+Ilustrasi : 
+A                     I                      Q
+   B               H     J                 P
+      C         G          K            O
+         D    F                L      N
+            E                      M
+
+Karena: 
+Level 1 : A, I, Q
+Level 2 : B, H, J, P
+Level 3 : C, G, K, O
+Level 4 : D, F, L, N
+Level 5 : E, M
+
+
+Contoh 3 :
+shapeOfW(“ABCDFGHIJKLMNOP”, 4)
+
+//result yang diharapkan : AHNBGIMOCFJLPDK
+
+Ilustrasi : 
+A                H                 N
+   B          G    I           M     O
+      C    F          J     L            P
+         D                K
+            
+
+Karena:
+Level 1 : A, H, N
+Level 2 : B, G, I M, O
+Level 3 : C, F, J, L, P
+Level 4 : D, K
+
+
+

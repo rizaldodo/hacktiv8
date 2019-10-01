@@ -1,0 +1,32 @@
+1. 	store "F" without any value 
+	store "m" = 600
+	store "a" = 2
+	calculate m x a
+	store the calculation "m" x "a" to "F"
+	DISPLAY "F" (F must be equal to 1200)
+
+2. 	store "gregorian" with any value
+	calculate "gregorian" mod 4 
+	calculate "gregorian" mod 100
+	calculate "gregorian" mod 400
+	store "result1" to result of calculation mod 4
+	store "result2" to result of calculation mod 100
+	store "result3" to result of calculation mod 400
+	  IF "result1" equal to 0 AND "result2" equal besides 0, DISPLAY "Tahun kabisat"
+	  OR if "result1" equal to 0 AND "result2" equal to 0 AND "result3" to 0, DISPLAY "Tahun kabisat"
+	  ELSE DISPLAY "Bukan tahun kabisat" 
+	
+3. 	store "clothes" equal to 0
+	WHILE "clothes" smaller than 20
+	  ADD "clothes" by 1
+	
+	WHILE "clothes" equal to 19 DISPLAY "Nyalakan mesin cuci"
+	
+4. 	store "siswa/siswi" equal to 40
+	IF "siswa/siswi" greater than 1 subtract by 1
+	  IF kuku "siswa/siswi" panjang
+	    DISPLAY hukum siswa/siswi
+	  ELSE
+	    DISPLAY puji siswa/siswi
+	IF "siswa/siswi" equal and smaller then to 1 DISPLAY "selesai"
+	
