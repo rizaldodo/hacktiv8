@@ -10,7 +10,7 @@ function steam(arr) {
           price : 290000
       },
       aco : {
-          name : "Assasin's Creed Odyssey",
+          name : `Assasin's Creed Odyssey`,
           genre : 'rpg',
           price : 500000
       },
@@ -20,7 +20,7 @@ function steam(arr) {
           price : 120000
       },
       pubg : {
-          name : 'Playerunknown\'s Battlegrounds',
+          name : `Playerunknown's Battlegrounds`,
           genre : 'first-person shooter',
           price : 210000
       },
@@ -33,41 +33,33 @@ function steam(arr) {
   var subTotal = 0;
   var tempAction = []; 
   var tempFps = [];
-  var tempRpg = []; 
+  var tempRpg = [];
   for(game in listGame){
     for(i=0; i<arr.length; i++){
           if(arr[i] == game){
-            //   console.log(listGame[game]);
-            //   console.log('=====')
               subTotal += listGame[game].price;
-            //   console.log(subTotal);
-              if(listGame[game].genre === 'action'){
+
+                if(listGame[game].genre === 'action'){
                   tempAction.push({
                       title : listGame[game].name
                   })
-              }else if(listGame[game].genre === 'first-person shooter'){
-                  tempFps.push({
-                      title : listGame[game].name
-                  })
-              }else if(listGame[game].genre === 'rpg'){
-                tempRpg.push({
-                    title : listGame[game].name
-                })
+                  result['action'] = tempAction; 
+                }else if(listGame[game].genre === 'first-person shooter'){
+                    tempFps.push({
+                        title : listGame[game].name
+                    })
+                    result['first-person shooter'] = tempFps; 
+                }else if(listGame[game].genre === 'rpg'){
+                    tempRpg.push({
+                        title : listGame[game].name
+                    })
+                    result['rpg'] = tempRpg; 
               }
           }
       }
   }
-  result = {
-      action : tempAction,
-      rpg : tempRpg,
-      'first-person shooter' : tempFps,
-      subTotal : subTotal
+  result['subTotal'] = subTotal;
 
-  }
-//   console.log(tempAction);
-//   console.log(tempRpg);
-//   console.log(tempFps);
-//   console.log(subTotal);
 return result;
 }
 
